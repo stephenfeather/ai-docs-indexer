@@ -2,7 +2,18 @@
 
 Generate compressed documentation indexes for AI agent context files (AGENTS.md, CLAUDE.md, etc.).
 
-Based on Vercel's research finding that passive context (8KB compressed index) achieved 100% pass rate vs 53% for baseline.
+## Why This Approach?
+
+Based on [Vercel's research on AGENTS.md](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals), embedding a compressed documentation index directly in agent context dramatically outperforms other approaches:
+
+| Approach | Pass Rate |
+|----------|-----------|
+| Baseline (no docs) | 53% |
+| Skills (tool-based retrieval) | 53% |
+| Skills with explicit instructions | 79% |
+| **AGENTS.md (passive context)** | **100%** |
+
+The key insight: rather than requiring agents to decide when to invoke documentation tools, embedding a compressed index (~8KB, 80% reduction from full docs) makes the information always available. This eliminates decision friction and sequencing problems that cause agents to skip retrieval.
 
 ## Installation
 
