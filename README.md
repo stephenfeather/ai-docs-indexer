@@ -80,7 +80,7 @@ ai-docs-indexer scan ./docs -n "Wordpress CLI Abilities" -i "Use retrieval-led r
 Output:
 
 ```text
-[Wordpress CLI Abilities]|root: ./mcp-adapter|IMPORTANT: Use retrieval-led reasoning|.:{README.md}|architecture:{overview.md}|getting-started:{README.md,basic-examples.md,installation.md}|guides:{cli-usage.md,creating-abilities.md,custom-transports.md,default-server.md,error-handling.md,observability.md,testing.md,transport-permissions.md}|migration:{v0.3.0.md}|troubleshooting:{common-issues.md}
+[mcp-adapter docs]|root: ./mcp-adapter|IMPORTANT: Use retrieval-led reasoning|.:{README.md}|architecture:{overview.md}|getting-started:{README.md,basic-examples.md,installation.md}|guides:{cli-usage.md,creating-abilities.md,custom-transports.md,default-server.md,error-handling.md,observability.md,testing.md,transport-permissions.md}|migration:{v0.3.0.md}|troubleshooting:{common-issues.md}
 ```
 
 ## Output Formats
