@@ -125,6 +125,7 @@ Options:
   --follow-symlinks           Follow symbolic links
   --stdout                    Force output to stdout
   -q, --quiet                 Suppress status messages
+  -c, --compress              Output on a single line without newlines
 ```
 
 ## License

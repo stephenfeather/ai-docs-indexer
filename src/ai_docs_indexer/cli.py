@@ -90,6 +90,11 @@ def main():
     is_flag=True,
     help="Suppress status messages.",
 )
+@click.option(
+    "-c", "--compress",
+    is_flag=True,
+    help="Output on a single line without newlines.",
+)
 def scan(
     path: str,
     output: str | None,
@@ -102,6 +107,7 @@ def scan(
     follow_symlinks: bool,
     stdout: bool,
     quiet: bool,
+    compress: bool,
 ):
     """
     Scan a documentation directory and generate an index.
@@ -143,6 +149,9 @@ def scan(
     for format_name in formats:
         formatter = get_formatter(format_name)
         formatted = formatter.format(index_data)
+
+        if compress:
+            formatted = formatted.replace("\n", "")
 
         if stdout or output is None:
             if len(formats) > 1:
