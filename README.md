@@ -83,6 +83,8 @@ Output:
 [mcp-adapter docs]|root: ./mcp-adapter|IMPORTANT: Use retrieval-led reasoning|.:{README.md}|architecture:{overview.md}|getting-started:{README.md,basic-examples.md,installation.md}|guides:{cli-usage.md,creating-abilities.md,custom-transports.md,default-server.md,error-handling.md,observability.md,testing.md,transport-permissions.md}|migration:{v0.3.0.md}|troubleshooting:{common-issues.md}
 ```
 
+Each entry like `architecture:{overview.md}` represents a subfolder and its files. The `.:{README.md}` entry contains files in the root of the scanned directory.
+
 ## Output Formats
 
 ### Pipe format (default)
